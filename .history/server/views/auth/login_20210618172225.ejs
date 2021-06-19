@@ -1,0 +1,58 @@
+<!--Header Partial Included -->
+<% include ../partials/header.ejs %>
+
+<!--Top Navbar Partial Included -->
+<% include ../partials/navbar.ejs %> 
+ 
+    <main class="container">
+    <!--Message Area-->
+    <% if(messages.length > 0) { %>
+    <div class="alert alert-danger">
+        <%= messages %>
+    </div>
+    <% } %>
+
+    <div class="row">
+        <div class="offset-md-4 col-md-4">
+            <h1 class="headerText">Please Login</h1>
+            <form method="POST" autocomplete="off">
+            <fieldset class="form-group mb-3">
+                <label for="username" class="form-label">Username: </label>
+                <input type="text" class="form-control"
+                name ="username" placeholder="Enter username" id="username" required autofocus>
+                </fieldset>
+            
+                <fieldset class="form-group mb-3">
+                    <label for="password" class="form-label">Password: </label>
+                    <input type="password" class="form-control"
+                    name ="password" placeholder="Enter password" 
+                    id="password" required>
+                    
+                    <div style="float: right;">
+                    or
+                    <a href="/register">Register Here</a>
+                    </div>
+                </fieldset>
+                   
+                <fieldset class="form-group text-right" style="float: right;">
+                    <input type="submit" class="btn btn-success" value="Login">
+                    &nbsp;&nbsp;
+                    <a href="/"><i class="fas fa-times">
+                    <input type="button" class="btn btn-warning" value="Cancel">
+                    </i>
+                    </a>
+                    </fieldset>
+
+            </form>
+        </div>
+    </div>
+
+
+    </main>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+ 
+ <!--Bottom Navbar Partial Included -->
+ <% include ../partials/bottomnavbar.ejs %> 
+
+<!--Footer Partial Included -->
+ <% include ../partials/footer.ejs %>

@@ -1,0 +1,57 @@
+<!--Header Partial Included -->
+<% include ../partials/header.ejs %>
+
+<!--Top Navbar Partial Included -->
+<% include ../partials/navbar.ejs %>
+
+
+<!--Content for ADD Page -->
+<div class="container">
+    <div class="row">
+        <div class="offset md-3 col-md-6">
+        <h1><%= title%></h1>
+
+        <form class="form" method="POST">
+        <div class="form-group">
+            <label for="contactnameTextField">Name</label>
+            <input type="text" class="form-control" id="nameTextField" placeholder="Enter name here" name="contactname" required>
+        </div>
+
+        <div class="form-group">
+            <label for="numberTextField">Author</label>
+            <input type="text" class="form-control" id="numberTextField" placeholder="Enter number here" name="contactnumber" required>
+        </div>
+
+        <div class="form-group">
+            <label for="publishedTextField">Published</label>
+            <input type="text" class="form-control" id="publishedTextField" placeholder="Enter published year here" name="published" required>
+        </div>
+
+        <div class="form-group">
+            <label for="descriptionTextField">Description</label>
+            <textarea type="text" class="form-control" id="descriptionTextField" placeholder="Enter description here" name="description" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="priceTextField">Price</label>
+            <input type="text" class="form-control" id="nameTextField" placeholder="Enter price here" name="price" required>
+        </div>
+
+        <br>
+
+        <button class="btn btn-primary" type="submit">
+            <i class="fas fa-edit"></i> Submit
+        </button>
+
+        <a href="/book-list" class="btn btn-warning"><i class="fas fa-undo"></i> Cancel</a>
+
+        </form>
+    </div>
+</div>
+</div>
+
+ <!--Bottom Navbar Partial Included -->
+ <% include ../partials/bottomnavbar.ejs %> 
+
+<!--Footer Partial Included -->
+ <% include ../partials/footer.ejs %>

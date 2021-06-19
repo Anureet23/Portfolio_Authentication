@@ -1,0 +1,23 @@
+<!--Header Partial Included -->
+<% include ../partials/header.ejs %>
+
+<!--Top Navbar Partial Included -->
+<% include ../partials/navbar.ejs %> 
+ 
+ <main class="container">
+ <!--Message Area-->
+ <%if(messages.length > 0) { %>
+<div class="alert alert-danger">
+     <%= messages %>
+</div>
+}
+
+
+ </main>
+ 
+ 
+ <!--Bottom Navbar Partial Included -->
+ <% include ../partials/bottomnavbar.ejs %> 
+
+<!--Footer Partial Included -->
+ <% include ../partials/footer.ejs %>

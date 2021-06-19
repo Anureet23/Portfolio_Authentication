@@ -1,0 +1,49 @@
+<!--Header Partial Included -->
+<% include partials/header.ejs %>
+
+<!--Top Navbar Partial Included -->
+<% include partials/navbar.ejs %>
+
+<div class="container">
+<div>
+<h1 class="headerText">Contact Me</h1>
+</div>
+<hr>
+<div class="row">
+<div class="col">
+<form>
+ <div class="mb-3">
+    <label for="firstname" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="firstname">
+  </div>
+  <div class="mb-3">
+    <label for="lastname" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="lastname">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+   <div class="mb-3">
+    <label for="contact" class="form-label">Contact Number</label>
+    <input type="text" class="form-control" id="contact">
+  </div>
+ <div class="mb-3">
+     <label for="message" class="form-label">Message</label>
+     <textarea class="form-control" id="message"></textarea>
+ </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<div class="col">
+<h4>Connect with me >/h4
+</div>
+</div>
+ </div>
+ <br><br>
+ <!--Bottom Navbar Partial Included -->
+ <% include partials/bottomnavbar.ejs %> 
+
+<!--Footer Partial Included -->
+ <% include partials/footer.ejs %>

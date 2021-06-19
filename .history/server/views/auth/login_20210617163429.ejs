@@ -1,0 +1,46 @@
+<!--Header Partial Included -->
+<% include ../partials/header.ejs %>
+
+<!--Top Navbar Partial Included -->
+<% include ../partials/navbar.ejs %> 
+ 
+ <main class="container">
+ <!--Message Area-->
+ <% if(messages.length > 0) { %>
+<div class="alert alert-danger">
+     <%= messages %>
+</div>
+<% } %>
+
+<div class="row">
+    <div class="offset-md-4 col-md-4">
+        <h1>Please Login</h1>
+        <form action="" method="POST" autocomplete="off">
+          <fieldset class="form-group">
+              <label for="username">Username: </label>
+              <input type="text" class="form-control"
+              name ="username" placeholder="Enter username" id="username" required autofocus>
+            </fieldset>
+         
+            <fieldset class="form-group">
+                <label for="password">Password: </label>
+                <input type="password" class="form-control"
+                name ="password" placeholder="Enter password" 
+                id="password" required>
+              </fieldset>
+
+              fieldset.form-group.text-right
+
+        </form>
+    </div>
+</div>
+
+
+ </main>
+ 
+ 
+ <!--Bottom Navbar Partial Included -->
+ <% include ../partials/bottomnavbar.ejs %> 
+
+<!--Footer Partial Included -->
+ <% include ../partials/footer.ejs %>

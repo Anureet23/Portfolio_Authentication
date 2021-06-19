@@ -1,0 +1,57 @@
+<!--Header Partial Included -->
+<% include ../partials/header.ejs %>
+
+<!--Top Navbar Partial Included -->
+<% include ../partials/navbar.ejs %>
+
+<!--Main Content-->
+<main class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-11">
+            <h1><%= title %></h1>
+            <a href="/book-list/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i>
+                Add a Contact</a>
+            <br><br>
+            <table class="table table-bordered table-striped table-hover">
+                <!--Header Row-->
+                <tr>
+                    <th class="text-center col-2">Name</th>
+                    <th class="text-center col-2">Author</th>
+                    <th class="text-center col-1">Published Year</th>
+                    <th class="text-center">Description</th>
+                    <th class="text-center col-1">Price</th>
+                    <th class="text-center col-1"> </th>
+                    <th class="text-center col-1"> </th>
+                </tr>
+                <!--Repeatble Template Row-->
+ 
+                  <% for(let count =0;count <BookList.length;count ++) {%>
+                    <tr>
+                        <td class="text-center"><%= BookList[count].name %></td>
+                        <td class="text-center"><%= BookList[count].author %></td>
+                        <td class="text-center"><%= BookList[count].published %></td>
+                        <td class="text-center"><%= BookList[count].description %></td>
+                        <td class="text-center"><%= BookList[count].price %></td>
+                        <td class="text-center col-1">
+                            <a href="/book-list/edit/<%= BookList[count]._id%>" class="btn btn-primary btn-sm">
+                          <i class="fas fa-pencil-alt"></i> Edit</a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href="/book-list/delete/<%= BookList[count]._id%>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i>Delete</a>
+                        </td>
+                    </tr>
+                  <%}%>
+            </table>
+        </div>
+    </div>
+</main>
+
+
+
+ <!--Bottom Navbar Partial Included -->
+ <% include ../partials/bottomnavbar.ejs %> 
+
+<!--Footer Partial Included -->
+ <% include ../partials/footer.ejs %>
